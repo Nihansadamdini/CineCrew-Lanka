@@ -1,0 +1,33 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Angular / Node
+node_modules/
+dist/
+.angular/
+coverage/
+
+# IDE and operating system
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# ChromaDB generated data
+ai/casting-assistant/chroma_data/
+
+# Test and temporary files
+.pytest_cache/
+*.tmp
