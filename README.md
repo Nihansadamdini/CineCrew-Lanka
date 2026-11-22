@@ -75,7 +75,7 @@ Start the Angular development server:
 ng serve
 ```
 
-Open http://localhost:4200/
+Open http://localhost:60448/
 
 ### Backend
 
