@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LucideDynamicIcon } from '@lucide/angular';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import {
   LucideClapperboard,
   LucideLayoutDashboard,
@@ -23,19 +24,21 @@ import {
     LucideSettings,
     LucideBell,
     LucideLogOut,
-    LucideDynamicIcon
+    LucideDynamicIcon,
+    RouterLink,
+    RouterLinkActive
   ],
   selector: 'app-sidebar',
   styleUrl: './sidebar.css',
   templateUrl: './sidebar.html',
 })
 export class Sidebar {
-  menuItems = [{label:'Dashboard', icon: LucideLayoutDashboard.icon}, 
-    {label:'My Production', icon: LucideClapperboard.icon}, 
-    {label:'Talent Directory', icon: LucideUsers.icon}, 
-    {label:'AI Casting Assistant', icon: LucideSparkles.icon}, 
-    {label:'Bookings', icon: LucideCalendarDays.icon}, 
-    {label:'Production Board', icon: LucideClipboardList.icon},];
+  menuItems = [{label:'Dashboard', icon: LucideLayoutDashboard.icon, route: '/dashboard' }, 
+    {label:'My Production', icon: LucideClapperboard.icon, route: '/productions'}, 
+    {label:'Talent Directory', icon: LucideUsers.icon, route: '/talent'}, 
+    {label:'AI Casting Assistant', icon: LucideSparkles.icon, route: '/ai-casting'}, 
+    {label:'Bookings', icon: LucideCalendarDays.icon, route: '/bookings'}, 
+    {label:'Production Board', icon: LucideClipboardList.icon, route: '/production-board'},];
   
   menuFooterItems = [{label:'Settings', icon: LucideSettings.icon},
     {label:'Notifications', icon: LucideBell.icon},

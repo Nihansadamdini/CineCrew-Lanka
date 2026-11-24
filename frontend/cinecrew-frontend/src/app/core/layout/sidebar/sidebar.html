@@ -9,7 +9,7 @@
 
     <nav class="sidebar-nav">
         @for (item of menuItems; track item.label) {
-            <a href="#" class="sidebar-link" [class.active]="item.label === 'AI Casting Assistant'">
+            <a [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="sidebar-link">                
                 <svg [lucideIcon]="item.icon"></svg>
                 <span class="sidebar-link-text">
                     {{ item.label }}
