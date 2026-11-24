@@ -1,0 +1,31 @@
+<div class="sidebar">
+    <div class="sidebar-brand">
+        <div class="sidebar-logo">
+            <svg lucideClapperboard></svg>
+        </div>
+        <h1>CineCrew Lanka</h1>
+        <p>Film production platform</p>
+    </div>
+
+    <nav class="sidebar-nav">
+        @for (item of menuItems; track item.label) {
+            <a [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="sidebar-link">                
+                <svg [lucideIcon]="item.icon"></svg>
+                <span class="sidebar-link-text">
+                    {{ item.label }}
+                </span>
+            </a>
+        }
+        <div class="sidebar-footer">
+            <div class="sidebar-divider"></div>
+            @for (item of menuFooterItems; track item.label) {
+                <a href="#" class="sidebar-link">
+                    <svg [lucideIcon]="item.icon"></svg>
+                    <span class="sidebar-link-text">
+                        {{ item.label }}
+                    </span>
+                </a>
+            }
+        </div>
+    </nav>
+</div>

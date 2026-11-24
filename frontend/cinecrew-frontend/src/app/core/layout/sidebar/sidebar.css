@@ -1,0 +1,100 @@
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: black;
+    padding: 30px 16px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+.sidebar-brand{
+    margin-bottom: 40px;
+}
+
+.sidebar-brand h1{
+    color: white;
+    font-size: 20px;
+    font-weight:700;
+    margin-bottom: 0;
+}
+
+.sidebar-brand p{
+    color: white;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.sidebar-nav a{
+    color: white;
+    text-decoration:none;
+    font-size:14px;
+    padding:12px 14px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-nav a:hover {
+    background-color: #8B5CF6;
+    color: #ffffff;
+}
+
+.sidebar-nav a.active {
+    background-color: #8B5CF6;
+    color: #ffffff;
+}
+
+.sidebar-footer{
+    margin-top:auto;
+    padding-top:20px;
+}
+
+.sidebar-divider {
+    border-top: 1px solid #2A3442;
+    margin-bottom: 16px;
+}
+
+.sidebar-footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-footer a:hover {
+    background-color: #8B5CF6;
+    color: #F4F6FA;
+}
+
+.sidebar-logo {
+    color: #8B5CF6;
+    margin-bottom: 12px;
+}
+
+.sidebar-logo svg {
+    width: 28px;
+    height: 28px;
+}
+
+.sidebar-icon{
+    color:white;
+}

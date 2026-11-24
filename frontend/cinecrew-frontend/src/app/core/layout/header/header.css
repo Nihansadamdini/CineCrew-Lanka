@@ -1,0 +1,106 @@
+
+/* Main header container */
+.dashboard-header {
+    height: 80px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.dashboard-header {
+    position: relative;
+}
+
+.dashboard-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 32px;
+    right: 32px;
+    height: 1px;
+    background-color: #d0d0d0;
+}
+
+/* Left side: Icon and page information */
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.header-icon {
+    width: 42px;
+    height: 42px;
+    background-color: #151B24;
+    border: 1px solid #2A3442;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8B5CF6;
+}
+
+.header-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.header-text h1 {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header-text p {
+    color: #9C9C9C;
+    font-size: 12px;
+    margin: 5px 0 0;
+}
+
+/* Right side: Header actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-action {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #9CA3AF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.header-action svg {
+    width: 20px;
+    height: 20px;
+}
+
+.header-action:hover {
+    background-color: #1D2633;
+    color: #F4F6FA;
+}
+
+/* User profile avatar */
+.user-avatar {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background-color: #8B5CF6;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
