@@ -1,16 +1,17 @@
-import { Component, inject, DestroyRef } from '@angular/core';
+import { Component, inject, DestroyRef, Output, EventEmitter } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import {LucideClapperboard, LucideSunMoon,LucideBell,} from '@lucide/angular';
+import {LucideClapperboard, LucideSunMoon,LucideBell, LucideMenu} from '@lucide/angular';
 
 @Component({
-  imports: [LucideClapperboard, LucideSunMoon, LucideBell],
+  imports: [LucideClapperboard, LucideSunMoon, LucideBell, LucideMenu],
   selector: 'app-header',
   styleUrl: './header.css',
   templateUrl: './header.html',
 })
 export class Header {
+  @Output() menuToggle = new EventEmitter<void>();
   pageTitle = "Cast AI";
   pageSubtitle = "LLM-powered casting intelligence";
 

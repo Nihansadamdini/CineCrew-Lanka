@@ -10,4 +10,14 @@ import { Sidebar } from '../sidebar/sidebar';
   styleUrl: './dashboard-layout.css',
   templateUrl: './dashboard-layout.html',
 })
-export class DashboardLayout {}
+export class DashboardLayout {
+  isMobileMenuOpen = false;
+
+  toggleMobileMenu() {
+  this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  closeMobileMenu() {
+  this.isMobileMenuOpen = false;
+}
+}

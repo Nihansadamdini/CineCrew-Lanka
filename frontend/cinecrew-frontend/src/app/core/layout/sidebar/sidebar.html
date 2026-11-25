@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar" [class.mobile-open]="isMobileMenuOpen">
     <div class="sidebar-brand">
         <div class="sidebar-logo">
             <svg lucideClapperboard></svg>
@@ -9,7 +9,7 @@
 
     <nav class="sidebar-nav">
         @for (item of menuItems; track item.label) {
-            <a [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="sidebar-link">                
+            <a [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="sidebar-link" (click)="closeMenu.emit()">                
                 <svg [lucideIcon]="item.icon"></svg>
                 <span class="sidebar-link-text">
                     {{ item.label }}

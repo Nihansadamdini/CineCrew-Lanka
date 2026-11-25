@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { LucideDynamicIcon } from '@lucide/angular';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import {
@@ -33,6 +33,9 @@ import {
   templateUrl: './sidebar.html',
 })
 export class Sidebar {
+  @Input() isMobileMenuOpen = false;
+  @Output() closeMenu = new EventEmitter<void>();
+
   menuItems = [{label:'Dashboard', icon: LucideLayoutDashboard.icon, route: '/dashboard' }, 
     {label:'My Production', icon: LucideClapperboard.icon, route: '/productions'}, 
     {label:'Talent Directory', icon: LucideUsers.icon, route: '/talent'}, 
